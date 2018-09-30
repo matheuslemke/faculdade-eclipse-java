@@ -1,0 +1,15 @@
+for ( ; ; )
+{
+if ( a )
+{
+a = false ;
+s = "verdadeiro" ;
+break ;
+}
+else
+{
+a = true ;
+n = 1 ;
+}
+}
+1e

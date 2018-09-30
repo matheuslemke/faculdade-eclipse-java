@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type"
+		content="text/javascript; charset=UTF-8"></meta>
+	<title>Leitos Cidades</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/menu.css" />
+</h:head>
+<h:body
+	style="height: 100%; width: 100%;margin:0px;font-family:arial,sans-serif">
+
+	<div
+		style="position: relative !important; top: 0px; left: 0px; z-index: 3;">
+		<div id="menu" class="menu"
+			style="height: 38px; font-size: 12px; font-weight: bold; vertical-align: middle; background-color: black;">
+			<div style="padding-top: 10px; float: left;">
+				<a style="margin-left: 15px; color: white; text-decoration: none;"
+					href="./"> <span>Consultas</span>
+				</a> <a style="margin-left: 15px; text-decoration: none;"
+					href="about.xhtml"> <span>Sobre o Projeto</span>
+				</a> <a style="margin-left: 15px; text-decoration: none;"
+					href="partners.xhtml"> <span>Parceiros</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div style="margin: 20px;">
+		<h1>Consultas</h1>
+		<p:dialog widgetVar="statusDialog" modal="true" draggable="false"
+			closable="false" resizable="false" showHeader="false">
+			<p:graphicImage value="/Images/ajaxloading.gif" />
+		</p:dialog>
+		<p:tabView>
+			<p:tab title="Cidades">
+				<h:form>
+					<p:ajaxStatus onstart="PF('statusDialog').show()"
+						onsuccess="PF('statusDialog').hide()" />
+					<p:messages autoUpdate="true" />
+					<p:dataTable id="tblCidades" var="registrosCidade"
+						value="#{cidadeViewController.listaCidades}"
+						paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+						paginator="true" rows="10" style="margin-bottom:20px">
+
+						<f:facet name="header">
+							<p:outputPanel style="height:30px;">
+								<p:outputPanel style="float:right;">
+									<h:commandLink>
+										<p:graphicImage value="/resources/images/excel.png" width="24" />
+										<p:dataExporter type="xls" target="tblProducaoPeriodicos"
+											fileName="producoes" />
+									</h:commandLink>
+
+									<h:commandLink>
+										<p:graphicImage value="/resources/images/pdf.png" width="24" />
+										<p:dataExporter type="pdf" target="tblProducaoPeriodicos"
+											fileName="producoes" />
+									</h:commandLink>
+
+									<h:commandLink>
+										<p:graphicImage value="/resources/images/csv.png" width="24" />
+										<p:dataExporter type="csv" target="tblProducaoPeriodicos"
+											fileName="producoes" />
+									</h:commandLink>
+
+									<h:commandLink>
+										<p:graphicImage value="/resources/images/xml.png" width="24" />
+										<p:dataExporter type="xml" target="tblProducaoPeriodicos"
+											fileName="producoes" />
+									</h:commandLink>
+								</p:outputPanel>
+							</p:outputPanel>
+						</f:facet>
+
+						<p:column>
+							<f:facet name="header">
+								<h:outputText value="GID" />
+							</f:facet>
+							<h:outputText value="#{registrosCidade.gid}" />
+						</p:column>
+
+						<p:column>
+							<f:facet name="header">
+								<h:outputText value="Nome cidade" />
+							</f:facet>
+							<h:outputText value="#{registrosCidade.nomeCidade}" />
+						</p:column>
+
+						<p:column>
+							<f:facet name="header">
+								<h:outputText value="Link " />
+							</f:facet>
+							<a href="#{registrosCidade.link}" target="_new"><h:outputText
+									value="#{registrosCidade.link}" /></a>
+						</p:column>
+
+					</p:dataTable>
+				</h:form>
+			</p:tab>
+
+		</p:tabView>
+		<p:dialog widgetVar="dlg" showEffect="fade" modal="true"
+			header="Chart" resizable="false">
+			<p:outputPanel id="output" layout="block"
+				style="width:500px;height:300px" />
+		</p:dialog>
+	</div>
+</h:body>
+</html>

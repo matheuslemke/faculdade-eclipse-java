@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type"
+		content="text/javascript; charset=UTF-8"></meta>
+	<title>Unicentro :)</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/menu.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sina.css" />
+</h:head>
+<h:body style="height: 100%; width: 100%;margin:0px;font-family:arial,sans-serif">
+	
+	<div
+			style="position: relative !important; top: 0px; left: 0px; z-index: 3;">
+			<div id="menu" class="menu"
+				style="height: 38px; font-size: 12px; font-weight: bold; vertical-align: middle; background-color: black;">
+				<div style="padding-top: 10px; float: left;">
+					<a style="margin-left: 15px; text-decoration: none;"
+						href="./"> <span>Consultas</span>
+					</a>
+					<a style="margin-left: 15px;color: white; text-decoration: none;"
+						href="about.xhtml"> <span>Sobre o Projeto</span>
+					</a>									
+					<a style="margin-left: 15px; text-decoration: none;"
+						href="partners.xhtml"> <span>Parceiros</span>
+					</a>
+				</div>
+			</div>
+	</div>
+	<div style="margin:20px;">
+		<h1>Sobre o Projeto</h1>
+		<p:outputPanel style="margin: 50px;margin-top:10px;max-width: 900px;text-align: justify;">
+			<h:outputText>
+				<p>Este projeto tem como base a relação entre dois construtos para organizar, formalizar e 
+	
+				compartilhar dados e informações sobre a pesquisa científica: a Cientometria da Ciência da 
+				
+				Informação; e Linked Open Data da Ciência da Computação.</p>
+				
+				<p>
+				Segundo o Dicionário de Biblioteconomia e Arquivologia, a Cientometria é a “disciplina 
+				
+				que tem por objetivo medir as atividades de pesquisa científica e tecnológica mediante insumos 
+				
+				(mão-de-obra, investimentos) e produtos (equipamentos, produtos, publicações)” (CUNHA e 
+				
+				CAVALCANTI, 2008). Numa visão geral, trabalhos desta natureza organizam e cruzam dados e 
+				
+				informações sobre comunicações científicas (autores, artigos, patentes, grupos e institutos de 
+				
+				pesquisa, entre outros) para nortear políticas de ciência e tecnologia, realizar a gestão do 
+				
+				conhecimento em instituições de pesquisa, ou melhor conhecer um objeto de pesquisa. Como 
+				
+				exemplos de estudos cientométricos encontrados na literatura, têm-se: a avaliação da pesquisa 
+				
+				global sobre a educação: uma abordagem cientométrica (KONUR, 2012); perfil da produção 
+				
+				científica brasileira sobre a gripe pandêmica de influenza A/H1N1 (LUCHS, 2012); a produção 
+				
+				brasileira em Ciência da Informação no exterior como reflexo de institucionalização científica 
+				
+				(ARBOIT et al.,2011); e co-autoria em artigos e patentes: um estudo da interação entre a 
+				
+				produção científica e tecnológica (MOURA e CAREGNATO, 2011).</p>
+				
+				<p>Contudo, em estudos cientométricos, obter informações sobre o desenvolvimento da 
+				
+				ciência para subsidiar ações/estudos pode ser uma tarefa complexa (SANTOS e KOBASHI, 
+				
+				2009). Envolve conhecimentos diversos, em especial de computação, visto que existem desafios 
+				
+				na coleta, na organização e no relacionamento de dados pertinentes. Este projeto de pesquisa 
+				
+				parte do pressuposto que tais desafios existem porque os dados são provenientes da Internet e 
+				
+				estão distribuídos em várias fontes, apresentados em formatos não estruturados ou proprietários, 
+				
+				dificultando sua manipulação.</p>
+				
+				<p>Toma-se como exemplo duas fontes de dados amplamente difundidas entre pesquisadores 
+				
+				e disponibilizadas na Internet: a Plataforma Lattes (LATTES, 2013) e Sistema WebQualis 
+				
+				(WEBQUALIS, 2013). Na Plataforma Lattes se encontram dados sobre as comunicações 
+				
+				científicas produzidas por pesquisadores. Já no Sistema WebQualis estão estratificados os 
+				
+				índices de qualidade de algumas dessas comunicações. Interligando estas fontes, é possível 
+				
+				quantificar e qualificar algumas medidas da produção científica, considerando os elementos de 
+				
+				disseminação de conhecimento (publicação de artigos e de patentes; participação em projetos de 
+				
+				pesquisa; orientações de iniciação científica, de mestrado e de doutorado) e grupos de interesse 
+				
+				(um grupo de pesquisa, um programa de pós-graduação, ou uma instituição de pesquisa, entre 
+				
+				outros).</p>
+				
+				<p>Entretanto, aferir informações a partir das fontes supracitadas é uma tarefa custosa, visto 
+				
+				que os dados estão disponíveis de forma não estruturada (os currículos Lattes se encontram em 
+				
+				formato texto nas páginas de Internet e o qualis das revistas em arquivos pdf), dificultando a 
+				
+				organização, a extração, o cruzamento e a exploração de dados/informações.</p>
+				
+				<p>Para contornar essas dificuldades, como paradigma da Ciência da Computação, tem-se o 
+				
+				aporte técnico-metodológico do Linked Open Data (AKSW, 2013), o qual se baseia em um 
+				
+				conjunto de melhores práticas para organizar, publicar e conectar dados na web (LINKED 
+				
+				DATA, 2012a). O Linked Open Data tem como princípios norteadores (LINKED DATA, 
+				
+				2012b):</p>
+				
+				<p>1. tornar os dados disponíveis na web sob uma licença;</p>
+				
+				<p>2. disponibilizar os dados de forma estruturada;</p>
+				
+				<p>3. utilizar um formato de representação dos dados não proprietário;</p>
+				
+				<p>4. usar o formato Linked Data; e</p>
+				
+				<p>5. vincular dados a outros dados provenientes de diferentes fontes para criar um 
+				
+				contexto.</p>
+				
+				<p>Em suma, no paradigma Linked Open Data, os dados são publicados sob licenças abertas, 
+				
+				possibilitando que estes sejam reutilizados sem restrições, por diversas pessoas e em diversos 
+				
+				contextos.</p>
+				
+				<p>Diante dessa potencialidade de reutilização, a justificativa do trabalho se baseia no 
+				
+				alinhamento das tecnologias de Linked Open Data para o tratamento, a organização, o 
+				
+				cruzamento e a exploração de dados aderentes aos estudos do campo da Cientometria, 
+				
+				envolvendo principalmente, a estruturação de um modelo aberto que integre dados da Plataforma 
+				
+				Lattes e do WebQualis. Com a finalidade de enriquecer o modelo proposto, outros dados 
+				
+				provenientes de outras fontes abertas também podem ser considerados. Como exemplos de 
+				
+				outras fontes de dados, são citados o SCImago Journal  Country Rank (SCIMAGO, 2014) e o 
+				
+				Citeseer (CITESEER, 2014).</p>
+			
+			</h:outputText>
+		</p:outputPanel>
+	</div>
+</h:body>
+</html>

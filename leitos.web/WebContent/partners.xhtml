@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type"
+		content="text/javascript; charset=UTF-8"></meta>
+	<title>LODUnicentro - lod.unicentro.org</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/menu.css" />
+</h:head>
+<h:body style="height: 100%; width: 100%;margin:0px;font-family:arial,sans-serif">
+	
+	<div style="position: relative !important; top: 0px; left: 0px; z-index: 3;">
+		<div id="menu" class="menu"
+			style="height: 38px; font-size: 12px; font-weight: bold; vertical-align: middle; background-color: black;">
+			<div style="padding-top: 10px; float: left;">
+				<a style="margin-left: 15px; text-decoration: none;"
+					href="./"> <span>Consultas</span>
+				</a>
+				<a style="margin-left: 15px; text-decoration: none;"
+					href="about.xhtml"> <span>Sobre o Projeto</span>
+				</a>									
+				<a style="margin-left: 15px; color: white; text-decoration: none;"
+					href="partners.xhtml"> <span>Parceiros</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div style="margin:20px;">
+		<h1>Parceiros</h1>
+		<p:outputPanel style="margin: 50px;margin-top:10px;max-width: 900px;text-align: justify;">
+			<h:panelGrid columns="2" cellpadding="5">
+	            <p:graphicImage value="resources/images/AKSW_Logo_rgb.png" />
+	            <h:outputText
+	                value="Agile Knowledge Engineering and Semantic Web (AKSW)" />
+	            <p:graphicImage value="resources/images/unicentro.jpg" style="max-width: 300px;"/>
+	            <h:outputText
+	                value="Universidade Estadual do Centro Oeste" />
+        	</h:panelGrid>
+		</p:outputPanel>
+	</div>
+</h:body>
+</html>
